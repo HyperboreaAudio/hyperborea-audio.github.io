@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;300;400;500;600&family=Montserrat:wght@200;300;400&family=Playfair+Display:wght@400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #dfe3e7;
+  --color-secondary: #212529;
+  --color-third: #313236;
+  --color-background: #141414;
+  font-size: 14px;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+}
+
+.nav-bar ul li {
+  display: inline-block;
+}
+
+.header ul {
+  padding: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.nav-bar ul li a {
+  position: relative;
+  color: var(--color-primary);
+  font-size: 1.3rem;
+}
+
+.nav-bar ul li a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  top: 115%;
+  background-color: var(--color-primary);
+  transform-origin: bottom left;
+  transition: all 200ms ease-out;
+}
+
+.nav-bar ul li a:hover::after {
+  color: white;
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* main section */
+
+.main-section {
+  min-height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 1.5rem;
+  padding: 5rem 2rem;
+  background: rgb(33,37,41);
+  background: linear-gradient(180deg, rgba(33,37,41,1) 50%, rgba(20,20,20,1) 100%);
+}
+
+.main-section .hyper-logo {
+  height: 35rem;
+}
+
+.main-section .title {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+.main-section .label-info {
+  font-size: 1.3rem;
+  font-weight: 300;
+  letter-spacing: 0.1px;
+  margin: 1.5rem 0;
+}
+
+/* Discografia Session */
+
+.discografia {
+  min-height: 100%;
+  text-align: center;
+  background: rgb(20,20,20);
+  background: linear-gradient(180deg, rgba(20,20,20,1) 50%, rgba(7,7,7,1) 100%);
+}
+
+.discografia h2 {
+  display: inline-block;
+  padding: 0 1rem;
+  margin: 2rem 0 0 0;
+  border-radius: 10px;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  font-family: "Playfair Display", sans-serif;
+  font-size: 3rem;
+  letter-spacing: 0.3px;
+  transition: all 200ms ease;
+}
+
+.discografia h2:hover {
+  box-shadow: 1px 2px 20px var(--color-third);
+}
+
+.discografia article {
+  font-size: 1.3rem;
+  font-weight: 300;
+  letter-spacing: 0.1px;
+  margin: 2rem;
+}
+
+/* Album Covers session */
+
+.album-covers {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.album-covers .album-cv {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  padding: 2rem 1.7rem;
+  max-width: 22rem;
+  height: 27rem;
+  border-radius: 1rem;
+  margin: 0.5rem 0;
+}
+
+.album-covers .album-cv h4 {
+  font-size: 1.3rem;
+  margin: 0.5rem 0 0.3rem 0;
+}
+
+.album-covers .album-cv .album-image {
+  height: 17rem;
+  transition: all 200ms ease;
+}
+
+.album-covers .album-cv .album-image:hover {
+  transform: scale(1.05);
+}
+
+/* Artists Section */
+
+.artists {
+  height: 100vh;
+  background-image: url("../img/fundocapas.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.artists .art-intro {
+  text-align: center;
+}
+
+.artists .art-intro h3 {
+  display: inline-block;
+  padding: 0 1rem;
+  margin: 2rem 0 0 0;
+  border-radius: 10px;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  font-family: "Playfair Display", sans-serif;
+  font-size: 3rem;
+  letter-spacing: 0.3px;
+  box-shadow: 0 0 15px rgb(0, 0, 0, 0, 5);
+  transition: all 200ms ease;
+}
+
+footer {
+  background-color: #070707;
+  text-align: center;
+  padding: 1% 0;
+  display: flex;
+  flex-direction: column;
+}
+
+footer h5 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+}
+
+footer .foot-about {
+  margin: 7px 0 0 0;
+  color: gray;
+  font-size: 0.9rem;
+}
+
+footer .foot-about a {
+  color: var(--color-primary);
+}
+/* Global Networks */
+
+a {
+  text-decoration: none;
+}
+
+.label-num {
+  display: block;
+  color: gray;
+  opacity: 0.9;
+  font-size: 0.8rem;
+  margin: 0.3rem;
+}
+
+.gray {
+  color: white;
+  opacity: 0.5;
+}
